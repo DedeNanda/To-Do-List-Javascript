@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+DE+Grund:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap");
+
+:root {
+  --background-color: #1e3e62;
+  --warna1: #181c14;
+  --warna2: #8eaccd;
+  --warna3: #387478;
+  --warna4: #0b192c;
+  --button-color: #0d6efd;
+  --button-hover: #0a58ca;
+  --text-color: #fff;
+}
+
+body {
+  font-family: "Josefin Sans";
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 100px;
+}
+
+#todo-app {
+  background-color: var(--warna1);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--warna2);
+  margin-bottom: 1rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#input-list {
+  flex: 1;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid var(--warna2);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#input-list:focus {
+  border-color: var(--warna3);
+}
+
+#btn-add {
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn-add:hover {
+  background-color: var(--button-hover);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+ul li {
+  background-color: var(--warna4);
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li span {
+  flex: 1;
+  color: var(--warna2);
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+ul li button {
+  background-color: #ff4d4d;
+  border: none;
+  color: var(--text-color);
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+ul li button:hover {
+  background-color: #e04444;
+}
+
+@media (max-width: 720px) {
+  #todo-app {
+    padding: 5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #input-list,
+  #btn-add {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
